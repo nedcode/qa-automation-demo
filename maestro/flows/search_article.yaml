@@ -1,0 +1,19 @@
+# Smoke flow on a public demo app (Wikipedia for Android, appId org.wikipedia).
+# Same structure as a critical customer journey in a banking app:
+# start clean → get past onboarding → main action → verify the result.
+appId: org.wikipedia
+tags:
+  - smoke
+---
+- launchApp:
+    clearState: true
+- runFlow: ../subflows/skip_onboarding.yaml
+- tapOn: "Search Wikipedia"
+- inputText: "Berlin"
+- assertVisible:
+    id: "org.wikipedia:id/page_list_item_title"
+- tapOn:
+    id: "org.wikipedia:id/page_list_item_title"
+    index: 0
+- assertVisible: "Berlin"
+- takeScreenshot: berlin_article

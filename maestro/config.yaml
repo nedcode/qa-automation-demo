@@ -1,0 +1,5 @@
+# Maestro workspace configuration
+flows:
+  - flows/*
+includeTags:
+  - smoke

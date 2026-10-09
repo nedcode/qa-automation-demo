@@ -1,0 +1,21 @@
+{
+  "name": "qa-automation-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API test automation demo: Playwright (TypeScript) with JSON schema validation, a Maestro mobile flow and GitLab/GitHub CI pipelines.",
+  "author": "Nenad Petrović",
+  "license": "MIT",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "@types/node": "22.10.2",
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1",
+    "typescript": "5.7.2"
+  }
+}

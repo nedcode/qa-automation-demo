@@ -1,0 +1,7 @@
+# Reusable step – the Maestro equivalent of a Page Object method.
+# "optional: true" keeps the flow stable when onboarding was already dismissed.
+appId: org.wikipedia
+---
+- tapOn:
+    text: "Skip"
+    optional: true
